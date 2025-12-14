@@ -1,0 +1,33 @@
+<jxb:bindings version="3.0"
+  xmlns:jxb="https://jakarta.ee/xml/ns/jaxb"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <jxb:globalBindings>
+      <jxb:serializable uid="1" />
+  </jxb:globalBindings>
+
+  <jxb:bindings schemaLocation="xsd/SuministroInformacion.xsd" node="/xs:schema">
+      <jxb:schemaBindings>
+          <jxb:package name="com.verifactu.model.xml.suministro" />
+      </jxb:schemaBindings>
+  </jxb:bindings>
+
+  <jxb:bindings schemaLocation="xsd/RespuestaConsultaLR.xsd" node="/xs:schema">
+      <jxb:schemaBindings>
+          <jxb:package name="com.verifactu.model.xml.respuesta" />
+      </jxb:schemaBindings>
+  </jxb:bindings>
+
+  <jxb:bindings schemaLocation="xsd/SuministroLR.xsd" node="/xs:schema">
+      <jxb:schemaBindings>
+          <jxb:package name="com.verifactu.model.xml.suministrolr" />
+      </jxb:schemaBindings>
+  </jxb:bindings>
+
+  <jxb:bindings schemaLocation="xsd/RespuestaSuministro.xsd" node="/xs:schema">
+      <jxb:schemaBindings>
+          <jxb:package name="com.verifactu.model.xml.respuestasuministro" />
+      </jxb:schemaBindings>
+  </jxb:bindings>
+
+</jxb:bindings>
