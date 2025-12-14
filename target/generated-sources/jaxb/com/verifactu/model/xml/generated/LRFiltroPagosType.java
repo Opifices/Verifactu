@@ -1,0 +1,97 @@
+//
+// Este archivo ha sido generado por Eclipse Implementation of JAXB v3.0.0 
+// Visite https://eclipse-ee4j.github.io/jaxb-ri 
+// Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+// Generado el: 2025.12.14 a las 07:07:24 PM CET 
+//
+
+
+package com.verifactu.model.xml.generated;
+
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlType;
+
+
+/**
+ * <p>Clase Java para LRFiltroPagosType complex type.
+ * 
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * 
+ * <pre>
+ * &lt;complexType name="LRFiltroPagosType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="IDFactura" type="{https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/tike/cont/ws/SuministroInformacion.xsd}IDFacturaRecibidaNombreBCType"/&gt;
+ *         &lt;element name="ClavePaginacion" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "LRFiltroPagosType", namespace = "https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/tike/cont/ws/ConsultaLR.xsd", propOrder = {
+    "idFactura",
+    "clavePaginacion"
+})
+public class LRFiltroPagosType {
+
+    @XmlElement(name = "IDFactura", required = true)
+    protected IDFacturaRecibidaNombreBCType idFactura;
+    @XmlElement(name = "ClavePaginacion")
+    protected Double clavePaginacion;
+
+    /**
+     * Obtiene el valor de la propiedad idFactura.
+     * 
+     * @return
+     *     possible object is
+     *     {@link IDFacturaRecibidaNombreBCType }
+     *     
+     */
+    public IDFacturaRecibidaNombreBCType getIDFactura() {
+        return idFactura;
+    }
+
+    /**
+     * Define el valor de la propiedad idFactura.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link IDFacturaRecibidaNombreBCType }
+     *     
+     */
+    public void setIDFactura(IDFacturaRecibidaNombreBCType value) {
+        this.idFactura = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad clavePaginacion.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Double }
+     *     
+     */
+    public Double getClavePaginacion() {
+        return clavePaginacion;
+    }
+
+    /**
+     * Define el valor de la propiedad clavePaginacion.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Double }
+     *     
+     */
+    public void setClavePaginacion(Double value) {
+        this.clavePaginacion = value;
+    }
+
+}

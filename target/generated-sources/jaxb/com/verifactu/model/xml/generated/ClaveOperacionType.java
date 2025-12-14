@@ -1,0 +1,54 @@
+//
+// Este archivo ha sido generado por Eclipse Implementation of JAXB v3.0.0 
+// Visite https://eclipse-ee4j.github.io/jaxb-ri 
+// Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+// Generado el: 2025.12.14 a las 07:07:24 PM CET 
+//
+
+
+package com.verifactu.model.xml.generated;
+
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlType;
+
+
+/**
+ * <p>Clase Java para ClaveOperacionType.
+ * 
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <pre>
+ * &lt;simpleType name="ClaveOperacionType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="A"/&gt;
+ *     &lt;enumeration value="B"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
+ * </pre>
+ * 
+ */
+@XmlType(name = "ClaveOperacionType")
+@XmlEnum
+public enum ClaveOperacionType {
+
+
+    /**
+     * Indemnizaciones o prestaciones satisfechas superiores a 3005,06
+     * 
+     */
+    A,
+
+    /**
+     * Primas o  contraprestaciones percibidas superiores a 3005,06
+     * 
+     */
+    B;
+
+    public String value() {
+        return name();
+    }
+
+    public static ClaveOperacionType fromValue(String v) {
+        return valueOf(v);
+    }
+
+}

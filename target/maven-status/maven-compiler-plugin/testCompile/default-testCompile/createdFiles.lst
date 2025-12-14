@@ -1,0 +1,4 @@
+com\verifactu\service\security\impl\XadesRealSignatureServiceTest.class
+com\verifactu\ReplayChaosTest.class
+com\verifactu\web\controller\EmergencyControllerSecurityTest.class
+com\verifactu\ConcurrencyIntegrationTest.class

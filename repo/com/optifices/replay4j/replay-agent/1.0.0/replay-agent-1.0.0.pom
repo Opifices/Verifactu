@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.optifices.replay4j</groupId>
+        <artifactId>replay4j-parent</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>replay-agent</artifactId>
+    <name>Replay4J Agent</name>
+    <description>ByteBuddy Agent for Zero-Allocation JDBC instrumentation</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.optifices.replay4j</groupId>
+            <artifactId>replay-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.bytebuddy</groupId>
+            <artifactId>byte-buddy</artifactId>
+        </dependency>
+        
+        <!-- Testing -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.10.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>5.8.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.24.2</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Fat JAR with all dependencies for Java Agent -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.5.1</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
+                            <transformers>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <manifestEntries>
+                                        <Premain-Class>com.optifices.replay4j.agent.AgentMain</Premain-Class>
+                                        <Agent-Class>com.optifices.replay4j.agent.AgentMain</Agent-Class>
+                                        <Can-Redefine-Classes>true</Can-Redefine-Classes>
+                                        <Can-Retransform-Classes>true</Can-Retransform-Classes>
+                                    </manifestEntries>
+                                </transformer>
+                                <!-- Merge service files for Chronicle -->
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
+                            </transformers>
+                            <filters>
+                                <filter>
+                                    <artifact>*:*</artifact>
+                                    <excludes>
+                                        <exclude>META-INF/*.SF</exclude>
+                                        <exclude>META-INF/*.DSA</exclude>
+                                        <exclude>META-INF/*.RSA</exclude>
+                                    </excludes>
+                                </filter>
+                            </filters>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <!-- ProGuard Obfuscation Profile -->
+    <profiles>
+        <profile>
+            <id>secure</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.github.wvengen</groupId>
+                        <artifactId>proguard-maven-plugin</artifactId>
+                        <version>2.6.0</version>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals><goal>proguard</goal></goals>
+                            </execution>
+                        </executions>
+                        <configuration>
+                            <obfuscate>true</obfuscate>
+                            <injar>${project.build.finalName}.jar</injar>
+                            <outjar>${project.build.finalName}-secure.jar</outjar>
+                            <outputDirectory>${project.build.directory}</outputDirectory>
+                            <options>
+                                <option>-dontoptimize</option>
+                                <option>-dontshrink</option>
+                                <option>-allowaccessmodification</option>
+                                <option>-adaptresourcefilenames **.properties,**.xml</option>
+
+                                <!-- Keep Agent Entry Points -->
+                                <option>-keep public class com.optifices.replay4j.agent.AgentMain {
+                                    public static void premain(java.lang.String, java.lang.instrument.Instrumentation);
+                                    public static void agentmain(java.lang.String, java.lang.instrument.Instrumentation);
+                                }</option>
+
+                                <!-- Keep ByteBuddy Advice classes (must be visible) -->
+                                <option>-keep class com.optifices.replay4j.agent.jdbc.** { *; }</option>
+                                <option>-keep class com.optifices.replay4j.agent.time.** { *; }</option>
+                                <option>-keepattributes *Annotation*</option>
+                                <option>-keepattributes Signature</option>
+                                <option>-keepattributes Exceptions</option>
+
+                                <!-- Keep Public API -->
+                                <option>-keep public class com.optifices.replay4j.core.ReplayLogger { public *; }</option>
+                                <option>-keep public class com.optifices.replay4j.core.ReplayController { public *; }</option>
+                                <option>-keep public class com.optifices.replay4j.core.TimeController { public *; }</option>
+                                <option>-keep public class com.optifices.replay4j.core.ChaosHook { public *; }</option>
+                                <option>-keep public class com.optifices.replay4j.core.SqlDictionary { public *; }</option>
+                                
+                                <!-- Keep external libraries -->
+                                <option>-keep class net.bytebuddy.** { *; }</option>
+                                <option>-dontwarn net.bytebuddy.**</option>
+                                <option>-dontwarn net.openhft.**</option>
+                                <option>-dontwarn org.slf4j.**</option>
+                                <option>-dontwarn java.lang.invoke.**</option>
+                            </options>
+                            <libs>
+                                <lib>${java.home}/jmods/java.base.jmod</lib>
+                                <lib>${java.home}/jmods/java.instrument.jmod</lib>
+                                <lib>${java.home}/jmods/java.sql.jmod</lib>
+                            </libs>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+</project>

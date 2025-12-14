@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="3.0" xmlns="https://jakarta.ee/xml/ns/jaxb">
+  <!--
+
+Este archivo ha sido generado por Eclipse Implementation of JAXB v3.0.0 
+Visite https://eclipse-ee4j.github.io/jaxb-ri 
+Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+Generado el: 2025.12.14 a las 07:07:24 PM CET 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/tike/cont/ws/SuministroInformacion.xsd">
+    <schemaBindings map="false">
+      <package name="com.verifactu.model.xml.generated"/>
+    </schemaBindings>
+    <bindings scd="~tns:RegistroSii">
+      <class ref="com.verifactu.model.xml.generated.RegistroSii"/>
+    </bindings>
+    <bindings scd="~tns:SujetaPrestacionType">
+      <class ref="com.verifactu.model.xml.generated.SujetaPrestacionType"/>
+    </bindings>
+    <bindings scd="~tns:SujetaType">
+      <class ref="com.verifactu.model.xml.generated.SujetaType"/>
+    </bindings>
+    <bindings scd="~tns:FacturaType">
+      <class ref="com.verifactu.model.xml.generated.FacturaType"/>
+    </bindings>
+    <bindings scd="~tns:DesgloseFacturaRecibidasType">
+      <class ref="com.verifactu.model.xml.generated.DesgloseFacturaRecibidasType"/>
+    </bindings>
+    <bindings scd="~tns:IDFacturaRecibidaNombreBCType">
+      <class ref="com.verifactu.model.xml.generated.IDFacturaRecibidaNombreBCType"/>
+    </bindings>
+    <bindings scd="~tns:IDFacturaRecibidaNombreType">
+      <class ref="com.verifactu.model.xml.generated.IDFacturaRecibidaNombreType"/>
+    </bindings>
+    <bindings scd="~tns:IDFacturaRecibidaType">
+      <class ref="com.verifactu.model.xml.generated.IDFacturaRecibidaType"/>
+    </bindings>
+    <bindings scd="~tns:IDFacturaExpedidaBCType">
+      <class ref="com.verifactu.model.xml.generated.IDFacturaExpedidaBCType"/>
+    </bindings>
+    <bindings scd="~tns:IDFacturaConsulta1Type">
+      <class ref="com.verifactu.model.xml.generated.IDFacturaConsulta1Type"/>
+    </bindings>
+    <bindings scd="~tns:ClavePaginacionBienType">
+      <class ref="com.verifactu.model.xml.generated.ClavePaginacionBienType"/>
+    </bindings>
+    <bindings scd="~tns:ClavePaginacionClienteType">
+      <class ref="com.verifactu.model.xml.generated.ClavePaginacionClienteType"/>
+    </bindings>
+    <bindings scd="~tns:ClavePaginacionProveedorType">
+      <class ref="com.verifactu.model.xml.generated.ClavePaginacionProveedorType"/>
+    </bindings>
+    <bindings scd="~tns:IDFacturaImputacionType">
+      <class ref="com.verifactu.model.xml.generated.IDFacturaImputacionType"/>
+    </bindings>
+    <bindings scd="~tns:IDFacturaComunitariaType">
+      <class ref="com.verifactu.model.xml.generated.IDFacturaComunitariaType"/>
+    </bindings>
+    <bindings scd="~tns:RegistroSiiImputacion">
+      <class ref="com.verifactu.model.xml.generated.RegistroSiiImputacion"/>
+    </bindings>
+    <bindings scd="~tns:FacturaExpedidaType">
+      <class ref="com.verifactu.model.xml.generated.FacturaExpedidaType"/>
+    </bindings>
+    <bindings scd="~tns:IDFacturaExpedidaType">
+      <class ref="com.verifactu.model.xml.generated.IDFacturaExpedidaType"/>
+    </bindings>
+    <bindings scd="tns:RegistroAlta">
+      <class ref="com.verifactu.model.xml.generated.RegistroAlta"/>
+    </bindings>
+    <bindings scd="~tns:TrazabilidadType">
+      <class ref="com.verifactu.model.xml.generated.TrazabilidadType"/>
+    </bindings>
+    <bindings scd="tns:RegistroAnulacion">
+      <class ref="com.verifactu.model.xml.generated.RegistroAnulacion"/>
+    </bindings>
+    <bindings scd="~tns:SuministroInformacion">
+      <class ref="com.verifactu.model.xml.generated.SuministroInformacion"/>
+    </bindings>
+    <bindings scd="~tns:SuministroInformacionBaja">
+      <class ref="com.verifactu.model.xml.generated.SuministroInformacionBaja"/>
+    </bindings>
+    <bindings scd="~tns:SuministroInformacionCobrosPagos">
+      <class ref="com.verifactu.model.xml.generated.SuministroInformacionCobrosPagos"/>
+    </bindings>
+    <bindings scd="~tns:SuministroInformacionInmuebles">
+      <class ref="com.verifactu.model.xml.generated.SuministroInformacionInmuebles"/>
+    </bindings>
+    <bindings scd="~tns:ConsultaInformacion">
+      <class ref="com.verifactu.model.xml.generated.ConsultaInformacion"/>
+    </bindings>
+    <bindings scd="~tns:ConsultaInformacionCliente">
+      <class ref="com.verifactu.model.xml.generated.ConsultaInformacionCliente"/>
+    </bindings>
+    <bindings scd="~tns:ConsultaInformacionProveedor">
+      <class ref="com.verifactu.model.xml.generated.ConsultaInformacionProveedor"/>
+    </bindings>
+    <bindings scd="~tns:CabeceraSii">
+      <class ref="com.verifactu.model.xml.generated.CabeceraSii"/>
+    </bindings>
+    <bindings scd="~tns:CabeceraSiiBaja">
+      <class ref="com.verifactu.model.xml.generated.CabeceraSiiBaja"/>
+    </bindings>
+    <bindings scd="~tns:CabeceraSiiCobrosPagos">
+      <class ref="com.verifactu.model.xml.generated.CabeceraSiiCobrosPagos"/>
+    </bindings>
+    <bindings scd="~tns:DatosPresentacionType">
+      <class ref="com.verifactu.model.xml.generated.DatosPresentacionType"/>
+    </bindings>
+    <bindings scd="~tns:DatosPresentacion2Type">
+      <class ref="com.verifactu.model.xml.generated.DatosPresentacion2Type"/>
+    </bindings>
+    <bindings scd="~tns:CabeceraConsultaSii">
+      <class ref="com.verifactu.model.xml.generated.CabeceraConsultaSii"/>
+    </bindings>
+    <bindings scd="~tns:CabeceraConsultaSiiCliente">
+      <class ref="com.verifactu.model.xml.generated.CabeceraConsultaSiiCliente"/>
+    </bindings>
+    <bindings scd="~tns:CabeceraConsultaSiiProveedor">
+      <class ref="com.verifactu.model.xml.generated.CabeceraConsultaSiiProveedor"/>
+    </bindings>
+    <bindings scd="~tns:OperacionIntracomunitariaType">
+      <class ref="com.verifactu.model.xml.generated.OperacionIntracomunitariaType"/>
+    </bindings>
+    <bindings scd="~tns:BienDeInversionType">
+      <class ref="com.verifactu.model.xml.generated.BienDeInversionType"/>
+    </bindings>
+    <bindings scd="~tns:IDFacturaConsulta2Type">
+      <class ref="com.verifactu.model.xml.generated.IDFacturaConsulta2Type"/>
+    </bindings>
+    <bindings scd="~tns:IDFacturaARType">
+      <class ref="com.verifactu.model.xml.generated.IDFacturaARType"/>
+    </bindings>
+    <bindings scd="~tns:FacturaRecibidaType">
+      <class ref="com.verifactu.model.xml.generated.FacturaRecibidaType"/>
+    </bindings>
+    <bindings scd="~tns:CobrosType">
+      <class ref="com.verifactu.model.xml.generated.CobrosType"/>
+    </bindings>
+    <bindings scd="~tns:PagosType">
+      <class ref="com.verifactu.model.xml.generated.PagosType"/>
+    </bindings>
+    <bindings scd="~tns:DetalleIVAEmitidaType">
+      <class ref="com.verifactu.model.xml.generated.DetalleIVAEmitidaType"/>
+    </bindings>
+    <bindings scd="~tns:DetalleExentaType">
+      <class ref="com.verifactu.model.xml.generated.DetalleExentaType"/>
+    </bindings>
+    <bindings scd="~tns:DetalleIVARecibida2Type">
+      <class ref="com.verifactu.model.xml.generated.DetalleIVARecibida2Type"/>
+    </bindings>
+    <bindings scd="~tns:DetalleIVAEmitidaPrestacionType">
+      <class ref="com.verifactu.model.xml.generated.DetalleIVAEmitidaPrestacionType"/>
+    </bindings>
+    <bindings scd="~tns:DetalleIVARecibidaType">
+      <class ref="com.verifactu.model.xml.generated.DetalleIVARecibidaType"/>
+    </bindings>
+    <bindings scd="~tns:DesgloseRectificacionType">
+      <class ref="com.verifactu.model.xml.generated.DesgloseRectificacionType"/>
+    </bindings>
+    <bindings scd="~tns:AduanasType">
+      <class ref="com.verifactu.model.xml.generated.AduanasType"/>
+    </bindings>
+    <bindings scd="~tns:DatosInmuebleType">
+      <class ref="com.verifactu.model.xml.generated.DatosInmuebleType"/>
+    </bindings>
+    <bindings scd="~tns:DatosPagoCobroType">
+      <class ref="com.verifactu.model.xml.generated.DatosPagoCobroType"/>
+    </bindings>
+    <bindings scd="~tns:PersonaFisicaJuridicaESType">
+      <class ref="com.verifactu.model.xml.generated.PersonaFisicaJuridicaESType"/>
+    </bindings>
+    <bindings scd="~tns:PersonaFisicaJuridicaUnicaESType">
+      <class ref="com.verifactu.model.xml.generated.PersonaFisicaJuridicaUnicaESType"/>
+    </bindings>
+    <bindings scd="~tns:PersonaFisicaJuridicaType">
+      <class ref="com.verifactu.model.xml.generated.PersonaFisicaJuridicaType"/>
+    </bindings>
+    <bindings scd="~tns:ContraparteConsultaType">
+      <class ref="com.verifactu.model.xml.generated.ContraparteConsultaType"/>
+    </bindings>
+    <bindings scd="~tns:IDOtroType">
+      <class ref="com.verifactu.model.xml.generated.IDOtroType"/>
+    </bindings>
+    <bindings scd="~tns:TipoConDesgloseType">
+      <class ref="com.verifactu.model.xml.generated.TipoConDesgloseType"/>
+    </bindings>
+    <bindings scd="~tns:TipoSinDesgloseType">
+      <class ref="com.verifactu.model.xml.generated.TipoSinDesgloseType"/>
+    </bindings>
+    <bindings scd="~tns:TipoSinDesglosePrestacionType">
+      <class ref="com.verifactu.model.xml.generated.TipoSinDesglosePrestacionType"/>
+    </bindings>
+    <bindings scd="~tns:NoSujetaType">
+      <class ref="com.verifactu.model.xml.generated.NoSujetaType"/>
+    </bindings>
+    <bindings scd="~tns:IdRegistroExpInicialType">
+      <class ref="com.verifactu.model.xml.generated.IdRegistroExpInicialType"/>
+    </bindings>
+    <bindings scd="~tns:DepositoType">
+      <class ref="com.verifactu.model.xml.generated.DepositoType"/>
+    </bindings>
+    <bindings scd="~tns:VentaBienesConsignaType">
+      <class ref="com.verifactu.model.xml.generated.VentaBienesConsignaType"/>
+    </bindings>
+    <bindings scd="~tns:InfoExpedicionRecepcionType">
+      <class ref="com.verifactu.model.xml.generated.InfoExpedicionRecepcionType"/>
+    </bindings>
+    <bindings scd="~tns:IdRegistroDeclaradoType">
+      <class ref="com.verifactu.model.xml.generated.IdRegistroDeclaradoType"/>
+    </bindings>
+    <bindings scd="~tns:DestinoFinalExpedRecepType">
+      <class ref="com.verifactu.model.xml.generated.DestinoFinalExpedRecepType"/>
+    </bindings>
+    <bindings scd="~tns:RangoFechaPresentacionType">
+      <class ref="com.verifactu.model.xml.generated.RangoFechaPresentacionType"/>
+    </bindings>
+    <bindings scd="~tns:RangoFechaType">
+      <class ref="com.verifactu.model.xml.generated.RangoFechaType"/>
+    </bindings>
+    <bindings scd="~tns:RegistroDuplicadoType">
+      <class ref="com.verifactu.model.xml.generated.RegistroDuplicadoType"/>
+    </bindings>
+    <bindings scd="~tns:CabeceraType">
+      <class ref="com.verifactu.model.xml.generated.CabeceraType"/>
+    </bindings>
+    <bindings scd="~tns:TipoOperacionSujetaNoExentaType">
+      <typesafeEnumClass ref="com.verifactu.model.xml.generated.TipoOperacionSujetaNoExentaType"/>
+    </bindings>
+    <bindings scd="~tns:CausaExencionType">
+      <typesafeEnumClass ref="com.verifactu.model.xml.generated.CausaExencionType"/>
+    </bindings>
+    <bindings scd="~tns:ClaveTipoComunicacionType">
+      <typesafeEnumClass ref="com.verifactu.model.xml.generated.ClaveTipoComunicacionType"/>
+    </bindings>
+    <bindings scd="~tns:ClaveTipoFacturaType">
+      <typesafeEnumClass ref="com.verifactu.model.xml.generated.ClaveTipoFacturaType"/>
+    </bindings>
+    <bindings scd="~tns:EmitidaPorTercerosType">
+      <typesafeEnumClass ref="com.verifactu.model.xml.generated.EmitidaPorTercerosType"/>
+    </bindings>
+    <bindings scd="~tns:VariosDestinatariosType">
+      <typesafeEnumClass ref="com.verifactu.model.xml.generated.VariosDestinatariosType"/>
+    </bindings>
+    <bindings scd="~tns:FacturaModificadaType">
+      <typesafeEnumClass ref="com.verifactu.model.xml.generated.FacturaModificadaType"/>
+    </bindings>
+    <bindings scd="~tns:CuponType">
+      <typesafeEnumClass ref="com.verifactu.model.xml.generated.CuponType"/>
+    </bindings>
+    <bindings scd="~tns:SimplificadaCualificadaType">
+      <typesafeEnumClass ref="com.verifactu.model.xml.generated.SimplificadaCualificadaType"/>
+    </bindings>
+    <bindings scd="~tns:CompletaSinDestinatarioType">
+      <typesafeEnumClass ref="com.verifactu.model.xml.generated.CompletaSinDestinatarioType"/>
+    </bindings>
+    <bindings scd="~tns:AutorizacionArticulo15.4Type">
+      <typesafeEnumClass ref="com.verifactu.model.xml.generated.AutorizacionArticulo154Type"/>
+    </bindings>
+    <bindings scd="~tns:RegPrevioGGEEoREDEMEoCompetenciaType">
+      <typesafeEnumClass ref="com.verifactu.model.xml.generated.RegPrevioGGEEoREDEMEoCompetenciaType"/>
+    </bindings>
+    <bindings scd="~tns:MacrodatoType">
+      <typesafeEnumClass ref="com.verifactu.model.xml.generated.MacrodatoType"/>
+    </bindings>
+    <bindings scd="~tns:BienInversionType">
+      <typesafeEnumClass ref="com.verifactu.model.xml.generated.BienInversionType"/>
+    </bindings>
+    <bindings scd="~tns:DeducirEnPeriodoPosteriorType">
+      <typesafeEnumClass ref="com.verifactu.model.xml.generated.DeducirEnPeriodoPosteriorType"/>
+    </bindings>
+    <bindings scd="~tns:CountryType2">
+      <typesafeEnumClass ref="com.verifactu.model.xml.generated.CountryType2"/>
+    </bindings>
+    <bindings scd="~tns:CountryMiembroType">
+      <typesafeEnumClass ref="com.verifactu.model.xml.generated.CountryMiembroType"/>
+    </bindings>
+    <bindings scd="~tns:ClaveOperacionType">
+      <typesafeEnumClass ref="com.verifactu.model.xml.generated.ClaveOperacionType"/>
+    </bindings>
+    <bindings scd="~tns:EstadoRegistroSIIType">
+      <typesafeEnumClass ref="com.verifactu.model.xml.generated.EstadoRegistroSIIType"/>
+    </bindings>
+    <bindings scd="~tns:TipoClaveDeclaranteType">
+      <typesafeEnumClass ref="com.verifactu.model.xml.generated.TipoClaveDeclaranteType"/>
+    </bindings>
+  </bindings>
+  <bindings scd="x-schema::tns" xmlns:tns="https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/tike/cont/ws/RespuestaConsultaLR.xsd">
+    <schemaBindings map="false">
+      <package name="com.verifactu.model.xml.generated"/>
+    </schemaBindings>
+    <bindings scd="~tns:FacturaRespuestaType">
+      <class ref="com.verifactu.model.xml.generated.FacturaRespuestaType"/>
+    </bindings>
+    <bindings scd="~tns:FacturaRespuestaInformadaProveedorType">
+      <class ref="com.verifactu.model.xml.generated.FacturaRespuestaInformadaProveedorType"/>
+    </bindings>
+    <bindings scd="~tns:FacturaRespuestaExpedidaType">
+      <class ref="com.verifactu.model.xml.generated.FacturaRespuestaExpedidaType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaConsultaLRFacturasType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaConsultaLRFacturasType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaConsultaLRLLAAType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaConsultaLRLLAAType"/>
+    </bindings>
+    <bindings scd="~tns:RegistroRespuestaConsultaFactInformadasProveedorType">
+      <class ref="com.verifactu.model.xml.generated.RegistroRespuestaConsultaFactInformadasProveedorType"/>
+    </bindings>
+    <bindings scd="~tns:RegistroRespuestaConsultaFactInformadasClienteType">
+      <class ref="com.verifactu.model.xml.generated.RegistroRespuestaConsultaFactInformadasClienteType"/>
+    </bindings>
+    <bindings scd="~tns:TitularPeriodoType">
+      <class ref="com.verifactu.model.xml.generated.TitularPeriodoType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaConsultaLRFacturasRecibidasType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaConsultaLRFacturasRecibidasType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaConsultaLRFactInformadasClienteType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaConsultaLRFactInformadasClienteType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaConsultaLRFactInformadasAgrupadasClienteType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaConsultaLRFactInformadasAgrupadasClienteType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaConsultaLRFactInformadasProveedorType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaConsultaLRFactInformadasProveedorType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaConsultaLRFactInformadasAgrupadasProveedorType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaConsultaLRFactInformadasAgrupadasProveedorType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaConsultaLRFacturasEmitidasType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaConsultaLRFacturasEmitidasType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaConsultaLRBienesInversionType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaConsultaLRBienesInversionType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaConsultaLRDetOperIntracomunitariasType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaConsultaLRDetOperIntracomunitariasType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaConsultaLRCobrosMetalicoType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaConsultaLRCobrosMetalicoType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaConsultaLRAgenciasViajesType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaConsultaLRAgenciasViajesType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaConsultaLROperacionesSegurosType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaConsultaLROperacionesSegurosType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaConsultaCobrosType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaConsultaCobrosType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaConsultaInmueblesAdicionalesType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaConsultaInmueblesAdicionalesType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaConsultaPagosType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaConsultaPagosType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaConsultaLLAAType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaConsultaLLAAType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaConsultaLRVentaBienesConsignaType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaConsultaLRVentaBienesConsignaType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaConsultaLRFacturasClienteType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaConsultaLRFacturasClienteType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaConsultaLRFacturasAgrupadasClienteType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaConsultaLRFacturasAgrupadasClienteType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaConsultaLRFacturasProveedorType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaConsultaLRFacturasProveedorType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaConsultaLRFacturasAgrupadasProveedorType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaConsultaLRFacturasAgrupadasProveedorType"/>
+    </bindings>
+    <bindings scd="~tns:EstadoFacturaType">
+      <class ref="com.verifactu.model.xml.generated.EstadoFacturaType"/>
+    </bindings>
+    <bindings scd="~tns:EstadoFacturaImputacionType">
+      <class ref="com.verifactu.model.xml.generated.EstadoFacturaImputacionType"/>
+    </bindings>
+    <bindings scd="~tns:DatosDescuadreContraparteType">
+      <class ref="com.verifactu.model.xml.generated.DatosDescuadreContraparteType"/>
+    </bindings>
+    <bindings scd="~tns:EstadoFactura2Type">
+      <class ref="com.verifactu.model.xml.generated.EstadoFactura2Type"/>
+    </bindings>
+    <bindings scd="~tns:RegistroRespuestaConsultaEmitidasType">
+      <class ref="com.verifactu.model.xml.generated.RegistroRespuestaConsultaEmitidasType"/>
+    </bindings>
+    <bindings scd="~tns:RegistroRespuestaConsultaRecibidasType">
+      <class ref="com.verifactu.model.xml.generated.RegistroRespuestaConsultaRecibidasType"/>
+    </bindings>
+    <bindings scd="~tns:RegistroRespuestaConsultaFactInformadasAgrupadasClienteType">
+      <class ref="com.verifactu.model.xml.generated.RegistroRespuestaConsultaFactInformadasAgrupadasClienteType"/>
+    </bindings>
+    <bindings scd="~tns:RegistroRespuestaConsultaVentaBienesConsignaType">
+      <class ref="com.verifactu.model.xml.generated.RegistroRespuestaConsultaVentaBienesConsignaType"/>
+    </bindings>
+    <bindings scd="~tns:RegistroRespuestaConsultaLLAAType">
+      <class ref="com.verifactu.model.xml.generated.RegistroRespuestaConsultaLLAAType"/>
+    </bindings>
+    <bindings scd="~tns:RegistroRespuestaConsultaFactInformadasAgrupadasProveedorType">
+      <class ref="com.verifactu.model.xml.generated.RegistroRespuestaConsultaFactInformadasAgrupadasProveedorType"/>
+    </bindings>
+    <bindings scd="~tns:RegistroRespuestaConsultaBienesType">
+      <class ref="com.verifactu.model.xml.generated.RegistroRespuestaConsultaBienesType"/>
+    </bindings>
+    <bindings scd="~tns:RegistroRespuestaConsultaDetOperIntracomunitariasType">
+      <class ref="com.verifactu.model.xml.generated.RegistroRespuestaConsultaDetOperIntracomunitariasType"/>
+    </bindings>
+    <bindings scd="~tns:RegistroRespuestaConsultaCobrosMetalicoType">
+      <class ref="com.verifactu.model.xml.generated.RegistroRespuestaConsultaCobrosMetalicoType"/>
+    </bindings>
+    <bindings scd="~tns:RegistroRespuestaConsultaAgenciasViajesType">
+      <class ref="com.verifactu.model.xml.generated.RegistroRespuestaConsultaAgenciasViajesType"/>
+    </bindings>
+    <bindings scd="~tns:RegistroRespuestaConsultaOperacionesSegurosType">
+      <class ref="com.verifactu.model.xml.generated.RegistroRespuestaConsultaOperacionesSegurosType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaIvaDevengadoType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaIvaDevengadoType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaIvaDeducibleType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaIvaDeducibleType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaInfoAdicionalType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaInfoAdicionalType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaOperacionesEjercicioType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaOperacionesEjercicioType"/>
+    </bindings>
+    <bindings scd="~tns:RegistroRespuestaConsultaCobrosType">
+      <class ref="com.verifactu.model.xml.generated.RegistroRespuestaConsultaCobrosType"/>
+    </bindings>
+    <bindings scd="~tns:RegistroRespuestaConsultaInmueblesAdicionalesType">
+      <class ref="com.verifactu.model.xml.generated.RegistroRespuestaConsultaInmueblesAdicionalesType"/>
+    </bindings>
+    <bindings scd="~tns:RegistroRespuestaConsultaPagosType">
+      <class ref="com.verifactu.model.xml.generated.RegistroRespuestaConsultaPagosType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaDetOperIntracomunitariaType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaDetOperIntracomunitariaType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaCobrosMetalicoType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaCobrosMetalicoType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaOperacionesSegurosType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaOperacionesSegurosType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaVentaBienesConsignaType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaVentaBienesConsignaType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaConsultaLRVentaBVType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaConsultaLRVentaBVType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaConsultaFacturaCobrosType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaConsultaFacturaCobrosType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaConsultaInmueblesType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaConsultaInmueblesType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaConsultaFacturaPagosType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaConsultaFacturaPagosType"/>
+    </bindings>
+    <bindings scd="~tns:FacturaRespuestaRecibidaType">
+      <class ref="com.verifactu.model.xml.generated.FacturaRespuestaRecibidaType"/>
+    </bindings>
+    <bindings scd="~tns:FacturaRespuestaInformadaClienteType">
+      <class ref="com.verifactu.model.xml.generated.FacturaRespuestaInformadaClienteType"/>
+    </bindings>
+    <bindings scd="~tns:IndicadorPaginacionType">
+      <typesafeEnumClass ref="com.verifactu.model.xml.generated.IndicadorPaginacionType"/>
+    </bindings>
+    <bindings scd="~tns:ResultadoConsultaType">
+      <typesafeEnumClass ref="com.verifactu.model.xml.generated.ResultadoConsultaType"/>
+    </bindings>
+    <bindings scd="~tns:FacturaARType">
+      <typesafeEnumClass ref="com.verifactu.model.xml.generated.FacturaARType"/>
+    </bindings>
+    <bindings scd="~tns:EstadoRegistroSIIType">
+      <typesafeEnumClass ref="com.verifactu.model.xml.generated.EstadoRegistroSIIType2"/>
+    </bindings>
+  </bindings>
+  <bindings scd="x-schema::tns" xmlns:tns="https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/tike/cont/ws/ConsultaLR.xsd">
+    <schemaBindings map="false">
+      <package name="com.verifactu.model.xml.generated"/>
+    </schemaBindings>
+    <bindings scd="~tns:LRFiltroVentaBienesConsignaType">
+      <class ref="com.verifactu.model.xml.generated.LRFiltroVentaBienesConsignaType"/>
+    </bindings>
+    <bindings scd="~tns:LRFiltroAgenciasViajesType">
+      <class ref="com.verifactu.model.xml.generated.LRFiltroAgenciasViajesType"/>
+    </bindings>
+    <bindings scd="~tns:LRFiltroCobrosMetalicoType">
+      <class ref="com.verifactu.model.xml.generated.LRFiltroCobrosMetalicoType"/>
+    </bindings>
+    <bindings scd="~tns:LRFiltroOperacionesSegurosType">
+      <class ref="com.verifactu.model.xml.generated.LRFiltroOperacionesSegurosType"/>
+    </bindings>
+    <bindings scd="~tns:LRConsultaRecibidasType">
+      <class ref="com.verifactu.model.xml.generated.LRConsultaRecibidasType"/>
+    </bindings>
+    <bindings scd="~tns:LRConsultaEmitidasType">
+      <class ref="com.verifactu.model.xml.generated.LRConsultaEmitidasType"/>
+    </bindings>
+    <bindings scd="~tns:ConsultaLRFactInformadasClienteType">
+      <class ref="com.verifactu.model.xml.generated.ConsultaLRFactInformadasClienteType"/>
+    </bindings>
+    <bindings scd="~tns:ConsultaLRFactInformadasAgrupadasClienteType">
+      <class ref="com.verifactu.model.xml.generated.ConsultaLRFactInformadasAgrupadasClienteType"/>
+    </bindings>
+    <bindings scd="~tns:ConsultaLRFactInformadasProveedorType">
+      <class ref="com.verifactu.model.xml.generated.ConsultaLRFactInformadasProveedorType"/>
+    </bindings>
+    <bindings scd="~tns:ConsultaLRFactInformadasAgrupadasProveedorType">
+      <class ref="com.verifactu.model.xml.generated.ConsultaLRFactInformadasAgrupadasProveedorType"/>
+    </bindings>
+    <bindings scd="~tns:LRConsultaBienesInversionType">
+      <class ref="com.verifactu.model.xml.generated.LRConsultaBienesInversionType"/>
+    </bindings>
+    <bindings scd="~tns:LRConsultaDetOperIntracomunitariasType">
+      <class ref="com.verifactu.model.xml.generated.LRConsultaDetOperIntracomunitariasType"/>
+    </bindings>
+    <bindings scd="~tns:LRConsultaCobrosMetalicoType">
+      <class ref="com.verifactu.model.xml.generated.LRConsultaCobrosMetalicoType"/>
+    </bindings>
+    <bindings scd="~tns:LRConsultaAgenciasViajesType">
+      <class ref="com.verifactu.model.xml.generated.LRConsultaAgenciasViajesType"/>
+    </bindings>
+    <bindings scd="~tns:ConsultaCobrosType">
+      <class ref="com.verifactu.model.xml.generated.ConsultaCobrosType"/>
+    </bindings>
+    <bindings scd="~tns:ConsultaInmueblesAdicionalesType">
+      <class ref="com.verifactu.model.xml.generated.ConsultaInmueblesAdicionalesType"/>
+    </bindings>
+    <bindings scd="~tns:ConsultaPagosType">
+      <class ref="com.verifactu.model.xml.generated.ConsultaPagosType"/>
+    </bindings>
+    <bindings scd="~tns:LRConsultaLROperacionesSegurosType">
+      <class ref="com.verifactu.model.xml.generated.LRConsultaLROperacionesSegurosType"/>
+    </bindings>
+    <bindings scd="~tns:LRConsultaVentaBienesConsignaType">
+      <class ref="com.verifactu.model.xml.generated.LRConsultaVentaBienesConsignaType"/>
+    </bindings>
+    <bindings scd="~tns:ConsultaLLAAType">
+      <class ref="com.verifactu.model.xml.generated.ConsultaLLAAType"/>
+    </bindings>
+    <bindings scd="~tns:LRFiltroEmitidasType">
+      <class ref="com.verifactu.model.xml.generated.LRFiltroEmitidasType"/>
+    </bindings>
+    <bindings scd="~tns:LRFiltroFactInformadasClienteType">
+      <class ref="com.verifactu.model.xml.generated.LRFiltroFactInformadasClienteType"/>
+    </bindings>
+    <bindings scd="~tns:LRFiltroFactInformadasAgrupadasClienteType">
+      <class ref="com.verifactu.model.xml.generated.LRFiltroFactInformadasAgrupadasClienteType"/>
+    </bindings>
+    <bindings scd="~tns:LRFiltroFactInformadasProveedorType">
+      <class ref="com.verifactu.model.xml.generated.LRFiltroFactInformadasProveedorType"/>
+    </bindings>
+    <bindings scd="~tns:LRFiltroFactInformadasAgrupadasProveedorType">
+      <class ref="com.verifactu.model.xml.generated.LRFiltroFactInformadasAgrupadasProveedorType"/>
+    </bindings>
+    <bindings scd="~tns:LRFiltroRecibidasType">
+      <class ref="com.verifactu.model.xml.generated.LRFiltroRecibidasType"/>
+    </bindings>
+    <bindings scd="~tns:LRFiltroBienInversionType">
+      <class ref="com.verifactu.model.xml.generated.LRFiltroBienInversionType"/>
+    </bindings>
+    <bindings scd="~tns:LRFiltroDetOperIntracomunitariasType">
+      <class ref="com.verifactu.model.xml.generated.LRFiltroDetOperIntracomunitariasType"/>
+    </bindings>
+    <bindings scd="~tns:LRFiltroCobrosType">
+      <class ref="com.verifactu.model.xml.generated.LRFiltroCobrosType"/>
+    </bindings>
+    <bindings scd="~tns:LRFiltroInmueblesAdicionalesType">
+      <class ref="com.verifactu.model.xml.generated.LRFiltroInmueblesAdicionalesType"/>
+    </bindings>
+    <bindings scd="~tns:LRFiltroPagosType">
+      <class ref="com.verifactu.model.xml.generated.LRFiltroPagosType"/>
+    </bindings>
+    <bindings scd="~tns:LRFiltroConsultaLLAAType">
+      <class ref="com.verifactu.model.xml.generated.LRFiltroConsultaLLAAType"/>
+    </bindings>
+  </bindings>
+  <bindings scd="x-schema::tns" xmlns:tns="https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/tike/cont/ws/RespuestaSuministro.xsd">
+    <schemaBindings map="false">
+      <package name="com.verifactu.model.xml.generated"/>
+    </schemaBindings>
+    <bindings scd="~tns:RespuestaRegFactuSistemaFacturacionType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaRegFactuSistemaFacturacionType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaBaseType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaBaseType"/>
+    </bindings>
+    <bindings scd="~tns:RespuestaExpedidaType">
+      <class ref="com.verifactu.model.xml.generated.RespuestaExpedidaType"/>
+    </bindings>
+    <bindings scd="~tns:EstadoEnvioType">
+      <typesafeEnumClass ref="com.verifactu.model.xml.generated.EstadoEnvioType"/>
+    </bindings>
+    <bindings scd="~tns:EstadoRegistroType">
+      <typesafeEnumClass ref="com.verifactu.model.xml.generated.EstadoRegistroType"/>
+    </bindings>
+  </bindings>
+  <bindings scd="x-schema::tns" xmlns:tns="https://www2.agenciatributaria.gob.es/static_files/common/internet/dep/aplicaciones/es/aeat/tike/cont/ws/SuministroLR.xsd">
+    <schemaBindings map="false">
+      <package name="com.verifactu.model.xml.generated"/>
+    </schemaBindings>
+    <bindings scd="tns:RegFactuSistemaFacturacion">
+      <class ref="com.verifactu.model.xml.generated.RegFactuSistemaFacturacion"/>
+    </bindings>
+    <bindings scd="~tns:RegistroFacturaType">
+      <class ref="com.verifactu.model.xml.generated.RegistroFacturaType"/>
+    </bindings>
+  </bindings>
+</bindings>
+
